@@ -15,13 +15,25 @@ const Starshiplist = (props) => {
   return (  
     <>
     <div className="ship-cards">
+      {ships.length ?
+      <>
       {ships.map(ship =>
         <Link to='/starship' state={{ship}} key={ship.name}>
           <div className='ship-card'> 
-            {ship.name} <br />
+          {ship.name} <br />
           </div>
         </Link>
       )}
+      </>
+      :
+      <>
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      </>
+      }   
     </div>
     </>
   );
