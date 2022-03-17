@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.ship-cards {
+  display: flex;
+}
+
+.ship-card {
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+}
